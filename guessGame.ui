@@ -1,0 +1,1717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1202</width>
+    <height>835</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/icons/icons/icon.png</normaloff>:/icons/icons/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#iconOnlyWidget, #iconTextWidget {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+#iconOnlyWidget {
+width: 50px;
+}
+
+#logoIconOnly {
+padding: 5px;
+}
+
+#logoIAT {
+padding: 4px;
+}
+
+#iconOnlyWidget QPushButton{
+color: rgb(67, 67, 67);
+border: none;
+height: 50px;
+color: white;
+margin: 5px;
+padding: 5px;
+border-radius: 7px;
+}
+
+#iconOnlyWidget QPushButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+
+#iconTextWidget QPushButton{
+border: none;
+height: 50px;
+color: black;
+margin: 5px;
+padding: 5px;
+border-radius: 10px;
+}
+
+#iconTextWidget QPushButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+color: white;
+}
+
+#iconTextWidget QPushButton {
+font: 14px &quot;Alegreya Sans SC&quot;;
+}
+
+#fullMenuWidget {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ECE9E6, stop:1 #FFFFFF);
+}
+
+#header QPushButton {
+border: none;
+padding: 8px;
+border-radius: 10px;
+margin: 5px;
+}
+
+#header QPushButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+#stackedWidget {
+text-align: left;
+background-color: #330033;
+}
+
+#iconOnlyWidget #exitIconOnly {
+padding: 15px;
+}
+
+#loginPage #loginpageLabel {
+font-weight: bold;
+font-size: 45px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 0;
+padding: 0;
+color: #ffa500;
+}
+
+#loginPage #usernameLabel, #passwordLabel {
+font-size: 20px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 10px 40px 10px;
+color: #ffa500;
+}
+
+#loginPage QLineEdit {
+height: 40px;
+border-radius: 17px;
+border: 2px solid black;
+margin: 10px 40px 10px;
+padding: 10px;
+font-size: 15px;
+}
+#loginPage QLineEdit::focus {
+border: 2px solid qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+#loginPage QPushButton {
+height: 50px;
+font-size: 18px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 10px 50px 10px;
+border: none;
+color: #ffa500;
+}
+
+#loginPage QPushButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+border-radius: 15px;
+border: 1px solid black;
+color: black;
+}
+
+#signupPage #signuppageLabel {
+font-weight: bold;
+font-size: 45px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 0;
+padding: 0;
+color: #ffa500;
+}
+
+#signupPage #newUsernameLabel, #newPasswordLabel, #confirmPasswordLabel {
+font-size: 20px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 10px 40px 10px;
+color: #ffa500;
+}
+
+#signupPage QLineEdit {
+height: 40px;
+border-radius: 17px;
+border: 2px solid black;
+margin: 10px 40px 10px;
+padding: 10px;
+font-size: 15px;
+}
+
+#signupPage QLineEdit::focus {
+border: 2px solid qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+#signupPage QPushButton {
+height: 50px;
+font-size: 18px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 10px 50px 10px;
+border: none;
+color: #ffa500;
+}
+
+#signupPage QPushButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+border-radius: 15px;
+border: 1px solid black;
+color: black;
+}
+
+#rangePage QLabel {
+margin: 10px;
+padding: 0;
+color: #ffa500;
+}
+
+#rangePage QPushButton {
+height: 50px;
+font-size: 18px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 10px 50px 10px;
+border: none;
+color: #ffa500;
+}
+
+#rangePage QPushButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+border-radius: 15px;
+border: 1px solid black;
+color: black;
+}
+
+#rangePage QLineEdit {
+height: 40px;
+border-radius: 17px;
+border: 2px solid black;
+margin: 20px 40px 10px;
+padding: 10px;
+font-size: 30px;
+font-family: &quot;Terminal&quot;;
+text-align: center;
+}
+
+#profilePage QLineEdit::focus {
+border: 2px solid qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+#rangePage QLineEdit::focus {
+border: 2px solid qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+#profilePage #profilePicture {
+margin: 0px 10px 0px;
+
+border-radius: 50%
+}
+
+#profilePage QLineEdit {
+height: 18px;
+width: 250px;
+border-radius: 17px;
+border: 2px solid black;
+margin: 3px;
+padding: 10px;
+font-size: 15px;
+}
+
+#profilePage #saveButton {
+margin: 5px 50px 5px;
+height: 40px;
+font-size: 18px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin-left: 15px;
+border: none;
+color: #ffa500;
+}
+
+#profilePage #saveButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+border-radius: 15px;
+border: 1px solid black;
+color: black;
+}
+
+#profilePage #usernameEditButton, #passwordEditButton {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+border-radius: 5px;
+width: 30px;
+height: 30px;
+}
+
+#profilePage #usernameEditButton::hover, #passwordEditButton::hover {
+border: 2px solid qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+background-color: white;
+}
+
+#profilePage #guessCounterLabel {
+color: white;
+margin: 5px 5px 5px;
+}
+
+#playPage #guessNumberLabel {
+margin: 0px 10px 30px;
+padding: 0;
+color: #ffa500;
+}
+
+#playPage #guessEdit {
+height: 40px;
+border-radius: 17px;
+border: 2px solid black;
+margin: 0px 40px 10px;
+padding: 10px;
+font-size: 30px;
+font-family: &quot;Terminal&quot;;
+text-align: center;
+}
+
+#playPage #guessEdit::focus {
+border: 2px solid qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+}
+
+#playPage QPushButton {
+height: 50px;
+font-size: 22px;
+font-family: &quot;Alegreya Sans SC&quot;;
+margin: 10px 20px 10px;
+border: none;
+color: #ffa500;
+}
+
+#playPage QPushButton::hover {
+background-color: qlineargradient(spread:pad, x1:0.466, y1:0, x2:0.488636, y2:1, stop:0 #ffb347, stop:1 #ffcc33);
+border-radius: 15px;
+border: 1px solid black;
+color: black;
+}
+
+#playPage #correctGuessLabel {
+color:white;
+margin: 15px 0px 0px
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QWidget" name="iconOnlyWidget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="logoIconOnly">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icons/icons/71jgOh9AaBL.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="loginIconOnly">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/log-in.svg</normaloff>
+             <normalon>:/icons/icons/log-in_white.png</normalon>:/icons/icons/log-in.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="signupIconOnly">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/user-plus.svg</normaloff>
+             <normalon>:/icons/icons/user-plus_white.png</normalon>:/icons/icons/user-plus.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="playIconOnly">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/play.svg</normaloff>
+             <normalon>:/icons/icons/play_white.png</normalon>:/icons/icons/play.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="profileIconOnly">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/user.svg</normaloff>
+             <normalon>:/icons/icons/user_white.png</normalon>:/icons/icons/user.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>638</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exitIconOnly">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icons/icons/x-circle.svg</normaloff>:/icons/icons/x-circle.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="iconTextWidget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="topMargin">
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="logoIAT">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resource.qrc">:/icons/icons/71jgOh9AaBL.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="guessGameLabel">
+           <property name="font">
+            <font>
+             <family>Alegreya Sans SC</family>
+             <pointsize>13</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Guess Game&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="loginButtonIAT">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Login</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/log-in.svg</normaloff>
+             <normalon>:/icons/icons/log-in_white.png</normalon>:/icons/icons/log-in.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>14</width>
+             <height>14</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="signupButtonIAT">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Sign Up</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/user-plus.svg</normaloff>
+             <normalon>:/icons/icons/user-plus_white.png</normalon>:/icons/icons/user-plus.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>14</width>
+             <height>14</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="playButtonIAT">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Play</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/play.svg</normaloff>
+             <normalon>:/icons/icons/play_white.png</normalon>:/icons/icons/play.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>14</width>
+             <height>14</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="profileButtonIAT">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Profile</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/icons/user.svg</normaloff>
+             <normalon>:/icons/icons/user_white.png</normalon>:/icons/icons/user.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>14</width>
+             <height>14</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>637</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exitButtonIAT">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>Exit</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icons/icons/x-circle.svg</normaloff>:/icons/icons/x-circle.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QWidget" name="fullMenuWidget" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="header" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>60</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="menuButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icons/icons/menu.svg</normaloff>:/icons/icons/menu.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>287</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="randomGuesserLabel">
+            <property name="font">
+             <font>
+              <family>Alegreya Sans SC</family>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Random Number Guesser</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>286</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="profileButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icons/icons/user.svg</normaloff>
+              <normalon>:/icons/icons/user_white.png</normalon>:/icons/icons/user.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <widget class="QWidget" name="loginPage">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="5" column="0">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="loginpageLabel">
+             <property name="text">
+              <string>LOG IN</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QLabel" name="usernameLabel">
+               <property name="text">
+                <string>Username</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="usernameEdit"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="passwordLabel">
+               <property name="text">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="passwordEdit">
+               <property name="echoMode">
+                <enum>QLineEdit::Password</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="4" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QPushButton" name="login_signupButton">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>Sign Up</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="login_enterButton">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>Enter</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="0">
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="signupPage">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="0">
+            <widget class="QLabel" name="signuppageLabel">
+             <property name="text">
+              <string>SIGN UP</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="newUsernameLabel">
+               <property name="text">
+                <string>Username</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="newUsernameEdit"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="newPasswordLabel">
+               <property name="text">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="newPasswordEdit"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="confirmPasswordLabel">
+               <property name="text">
+                <string>Confirm Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="confirmPasswordEdit"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="enterButton2">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>Enter</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="0">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="rangePage">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QLineEdit" name="rangeEdit">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="range_enterButton">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>ENTER</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="1">
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="rangeLabel">
+             <property name="font">
+              <font>
+               <family>Alegreya Sans SC</family>
+               <pointsize>25</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Input range to guess</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="1">
+            <spacer name="verticalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="profilePage">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1" rowspan="4">
+            <widget class="QLabel" name="profilePicture">
+             <property name="maximumSize">
+              <size>
+               <width>210</width>
+               <height>210</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resource.qrc">:/icons/icons/189533.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLineEdit" name="usernameProfile">
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="placeholderText">
+                <string>Username</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="usernameEditButton">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/icons/icons/edit.svg</normaloff>:/icons/icons/edit.svg</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="3">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLineEdit" name="passwordProfile">
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="placeholderText">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="passwordEditButton">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/icons/icons/edit.svg</normaloff>:/icons/icons/edit.svg</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="guessCounterLabel">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Correct Guess(es): 0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QPushButton" name="saveButton">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <spacer name="verticalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="playPage">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="2" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QLineEdit" name="guessEdit">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QPushButton" name="resetButton">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Reset</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="guessButton">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="text">
+                  <string>Guess</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="correctGuessLabel">
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Correct Guess(es): 0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="guessNumberLabel">
+             <property name="font">
+              <font>
+               <family>Alegreya Sans SC</family>
+               <pointsize>40</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Guess the Number!</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="verticalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="2">
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="1">
+            <spacer name="verticalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>menuButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>iconOnlyWidget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>31</x>
+     <y>251</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menuButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>iconTextWidget</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>241</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loginIconOnly</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>loginButtonIAT</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>68</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signupIconOnly</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signupButtonIAT</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playIconOnly</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>playButtonIAT</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>27</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profileIconOnly</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>profileButtonIAT</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>22</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>154</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loginButtonIAT</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>loginIconOnly</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>131</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>signupButtonIAT</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signupIconOnly</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playButtonIAT</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>playIconOnly</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profileButtonIAT</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>profileIconOnly</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>345</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exitButtonIAT</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>819</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>161</x>
+     <y>838</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exitIconOnly</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>821</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>27</x>
+     <y>847</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>login_signupButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signupButtonIAT</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>469</x>
+     <y>698</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>login_signupButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signupIconOnly</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>419</x>
+     <y>687</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>50</x>
+     <y>171</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profileIconOnly</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>profileButton</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>30</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1161</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>profileButtonIAT</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>profileButton</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1164</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
