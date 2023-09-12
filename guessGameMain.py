@@ -14,6 +14,10 @@ class MainWindow(QMainWindow):
         self.ui.iconOnlyWidget.hide()
         self.ui.stackedWidget.setCurrentIndex(0)
         self.ui.loginIconOnly.setChecked(True)
+        global userList
+        userList = ["admin", "sample"]
+        global passList
+        passList = ["admin123", "sample123"]
     
         
         
@@ -150,6 +154,60 @@ class MainWindow(QMainWindow):
         else:
             error_msg.setText("Input should be whole numbers only!")
             b = error_msg.exec_()
+
+    def on_login_enterButton_pressed(self):
+        error_msg2 = QMessageBox()
+        error_msg2.setIcon(QMessageBox.Warning)
+        error_msg2.setWindowTitle("ERROR")
+        error_msg2.setWindowIcon(QtGui.QIcon('icon.png'))
+        
+        for i in range(0, len(userList)):
+            if self.ui.usernameEdit.text() == userList[i] and self.ui.passwordEdit.text() == passList[i]:
+                self.ui.stackedWidget.setCurrentIndex(2)
+                self.ui.usernameProfile.setText(userList[i])
+                self.ui.passwordProfile.setText(passList[i])
+                break
+
+        if self.ui.usernameEdit.text().strip() == "" and self.ui.passwordEdit.text().strip() == "":
+                error_msg2.setText("Username and Password field is empty!")
+                h = error_msg2.exec_()
+                print("Error")
+        elif self.ui.usernameEdit.text().strip() == "":
+            error_msg2.setText("Username field is empty!")
+            k = error_msg2.exec_()
+        elif self.ui.passwordEdit.text().strip() == "":
+            error_msg2.setText("Password field is empty!")
+            i = error_msg2.exec_()
+        elif self.ui.usernameEdit.text() not in userList and self.ui.passwordEdit.text() not in passList:
+            error_msg2.setText("Invalid username or password!")
+            c = error_msg2.exec_()
+        
+
+    def on_enterButton2_pressed(self):
+        error_msg2 = QMessageBox()
+        error_msg2.setIcon(QMessageBox.Warning)
+        error_msg2.setWindowTitle("ERROR")
+        error_msg2.setWindowIcon(QtGui.QIcon('icon.png'))
+        if self.ui.newPasswordEdit.text() == self.ui.confirmPasswordEdit.text():
+            userList.append(self.ui.newUsernameEdit.text())
+            passList.append(self.ui.newPasswordEdit.text())
+            print("Sucessfully added")
+            self.ui.stackedWidget.setCurrentIndex(0)
+        elif self.ui.newPasswordEdit.text() != self.ui.confirmPasswordEdit.text():
+            error_msg2.setText("Password do not match!")
+            a = error_msg2.exec_()
+        else:
+            error_msg2.setText("Invalid Input")
+            g = error_msg2.exec_()
+    
+    def on_saveButton_pressed(self):
+        newUsername = self.ui.usernameProfile.text()
+        newPassword = self.ui.passwordProfile.text()
+        for i in userList:
+            userList[i] = newUsername
+            passList[i] = newPassword
+
+
 
 
 
