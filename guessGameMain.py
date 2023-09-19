@@ -4,6 +4,8 @@ from PyQt5 import uic, QtGui
 import sys, resource_rc, random
 from guessGame import Ui_MainWindow
 
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -18,10 +20,10 @@ class MainWindow(QMainWindow):
         userList = ["admin", "sample"]
         global passList
         passList = ["admin123", "sample123"]
+        global correctGuess
+        correctGuess = 0
+        
     
-        
-        
-
     def compute1(self, guessNum, multiplier):
         answer  = int(guessNum * multiplier)
         return answer
@@ -62,10 +64,26 @@ class MainWindow(QMainWindow):
     def on_signupButtonIAT_clicked(self):
         self.ui.stackedWidget.setCurrentIndex(1)
 
-    def on_playIconOnly_clicked(self):
-        self.ui.stackedWidget.setCurrentIndex(2)
-    def on_playButtonIAT_clicked(self):
-        self.ui.stackedWidget.setCurrentIndex(2)
+    def on_playIconOnly_pressed(self):
+        if self.ui.usernameProfile.text().strip() == "" and self.ui.passwordProfile.text().strip() == "" :
+            error_msg = QMessageBox()
+            error_msg.setIcon(QMessageBox.Warning)
+            error_msg.setWindowTitle("ERROR")
+            error_msg.setWindowIcon(QtGui.QIcon('icon.png'))
+            error_msg.setText("Log In is Required!")
+            x = error_msg.exec_()
+        else:
+            self.ui.stackedWidget.setCurrentIndex(2)
+    def on_playButtonIAT_pressed(self):
+        if self.ui.usernameProfile.text().strip() == ""  and self.ui.passwordProfile.text().strip() == "" :
+            error_msg = QMessageBox()
+            error_msg.setIcon(QMessageBox.Warning)
+            error_msg.setWindowTitle("ERROR")
+            error_msg.setWindowIcon(QtGui.QIcon('icon.png'))
+            error_msg.setText("Log In is Required!")
+            x = error_msg.exec_()
+        else:
+            self.ui.stackedWidget.setCurrentIndex(2)
 
     def on_profileIconOnly_clicked(self):
         self.ui.stackedWidget.setCurrentIndex(3)
@@ -124,9 +142,9 @@ class MainWindow(QMainWindow):
                 error_msg.setText("Guess not in range!")
                 a = error_msg.exec_()
             elif guess == guessNum:
+                # declare global again to access variable outside of function
                 global correctGuess
-                correctGuess = 0
-                correctGuess += 1
+                correctGuess = correctGuess + 1
                 self.ui.correctGuessLabel.setText(f"Correct Guess(es): {correctGuess}")
                 self.ui.guessCounterLabel.setText(f"Correct Guess(es): {correctGuess}")
                 win_msg = QMessageBox()
@@ -160,6 +178,8 @@ class MainWindow(QMainWindow):
         error_msg2.setIcon(QMessageBox.Warning)
         error_msg2.setWindowTitle("ERROR")
         error_msg2.setWindowIcon(QtGui.QIcon('icon.png'))
+
+        correctGuess = 0
         
         for i in range(0, len(userList)):
             if self.ui.usernameEdit.text() == userList[i] and self.ui.passwordEdit.text() == passList[i]:
@@ -178,9 +198,16 @@ class MainWindow(QMainWindow):
         elif self.ui.passwordEdit.text().strip() == "":
             error_msg2.setText("Password field is empty!")
             i = error_msg2.exec_()
+        elif self.ui.usernameEdit.text() not in userList:
+            error_msg2.setText("Invalid username!")
+            c = error_msg2.exec_()
+        elif self.ui.usernameEdit.text() in userList and self.ui.passwordEdit.text() not in passList:
+            error_msg2.setText("Invalid username!")
+            c = error_msg2.exec_()
         elif self.ui.usernameEdit.text() not in userList and self.ui.passwordEdit.text() not in passList:
             error_msg2.setText("Invalid username or password!")
             c = error_msg2.exec_()
+        
         
 
     def on_enterButton2_pressed(self):
@@ -201,11 +228,39 @@ class MainWindow(QMainWindow):
             g = error_msg2.exec_()
     
     def on_saveButton_pressed(self):
-        newUsername = self.ui.usernameProfile.text()
-        newPassword = self.ui.passwordProfile.text()
-        for i in userList:
-            userList[i] = newUsername
-            passList[i] = newPassword
+        if self.ui.usernameProfile.text().strip() == "" and self.ui.passwordProfile.text().strip() == "":
+            error_msg = QMessageBox()
+            error_msg.setIcon(QMessageBox.Warning)
+            error_msg.setWindowTitle("ERROR")
+            error_msg.setWindowIcon(QtGui.QIcon('icon.png'))
+            error_msg.setText("Username and Password fields are empty!")
+            x = error_msg.exec_()
+        elif self.ui.usernameProfile.text().strip() == "":
+            error_msg = QMessageBox()
+            error_msg.setIcon(QMessageBox.Warning)
+            error_msg.setWindowTitle("ERROR")
+            error_msg.setWindowIcon(QtGui.QIcon('icon.png'))
+            error_msg.setText("Username field is empty!")
+            x = error_msg.exec_()
+        elif self.ui.passwordProfile.text().strip() == "":
+            error_msg = QMessageBox()
+            error_msg.setIcon(QMessageBox.Warning)
+            error_msg.setWindowTitle("ERROR")
+            error_msg.setWindowIcon(QtGui.QIcon('icon.png'))
+            error_msg.setText("Password field is empty!")
+            x = error_msg.exec_()
+        else:
+            newUsername = self.ui.usernameProfile.text()
+            newPassword = self.ui.passwordProfile.text()
+            for i in range(len(userList)):
+                userList[i] = newUsername
+                passList[i] = newPassword
+            save_msg = QMessageBox()
+            save_msg.setIcon(QMessageBox.Information)
+            save_msg.setWindowTitle("SAVE")
+            save_msg.setWindowIcon(QtGui.QIcon('icon.png'))
+            save_msg.setText("New Credentials Saved")
+            y = save_msg.exec_()
 
 
 
